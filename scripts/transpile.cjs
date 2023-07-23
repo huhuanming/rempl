@@ -72,6 +72,7 @@ function transpileTypeScript() {
                 const { code: output, sourceMap } = sucrase.transform(input, {
                     filePath: id,
                     transforms: ['typescript'],
+                    // disableESTransforms: false,
                     disableESTransforms: true,
                     sourceMapOptions: {
                         compiledFilename: id,
@@ -102,6 +103,7 @@ async function transpile({
     ts = false,
     onSuccess,
 }) {
+    // const outputExt = format === 'esm' ? '.js' : '.js';
     const outputExt = format === 'esm' ? '.js' : '.cjs';
     const doneMessage = (duration) =>
         `${
