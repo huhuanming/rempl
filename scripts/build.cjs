@@ -53,7 +53,7 @@ async function buildBundle(options) {
             // write: true,
             // outfile: 'dist/rempl-new.js',
             format: 'esm',
-            minify: true,
+            minify: false,
             // sourcemap: false,
             define: {
                 __DEV__: false,
@@ -62,7 +62,7 @@ async function buildBundle(options) {
         {
             legalComments: 'none',
             logLevel: 'info',
-            minify: true,
+            minify: false,
             sourcemap: false,
         }
     );
@@ -100,7 +100,7 @@ async function buildBundle(options) {
                     },
                     format: 'esm',
                     logLevel: 'info',
-                    minify: true,
+                    minify: false,
                     write: false,
                 })
             )

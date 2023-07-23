@@ -23,7 +23,10 @@ export function fetchWsSettings() {
 
         return (meta && meta.getAttribute('content')) || undefined;
     }
-
+    const location = {
+        protocol: 'ws:',
+        hostname: undefined,
+    };
     const implicitUri = location.protocol + '//' + (location.hostname || 'localhost') + ':8177';
     let explicitUri = undefined;
     let setup = fetchEnvVariable();
@@ -52,7 +55,7 @@ export function fetchWsSettings() {
     }
 
     return {
-        explicit: explicitUri,
+        explicit: explicitUri || implicitUri,
         implicit: implicitUri,
     };
 }
@@ -100,7 +103,7 @@ export class BrowserWsTransport extends WsTransport {
     getInfo() {
         return {
             ...super.getInfo(),
-            location: String(location),
+            location: String(' '),
             title: top?.document?.title || top?.location?.href || 'Unknown',
         };
     }
