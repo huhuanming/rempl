@@ -9,11 +9,13 @@
         "Roman Dvornov <rdvornov@gmail.com>",
         "Sergey Melyukov <s.melukov@gmail.com>"
     ],
-    "type": "module",
     "types": "./lib/browser.d.ts",
     "browser": "./lib/browser.js",
     "main": "./dist/rempl.js",
     "module": "./lib/browser.js",
+    "bin": {
+        "rempl": "./bin/rempl"
+    },
     "scripts": {
         "lint": "eslint scripts/*.cjs src test && npm run ts-check",
         "ts-check": "tsc --noEmit",
@@ -32,7 +34,9 @@
         "prepublishOnly": "npm run lint && npm run build:clean && npm run ts-emit-types && npm run build && npm run build:server-assets && npm run test"
     },
     "dependencies": {
+        "basisjs-tools-server": "1.0.2",
         "chalk": "~4.1.2",
+        "clap": "~1.1.3",
         "rimraf": "^5.0.1",
         "socket.io-client": "^2.5.0"
     },
