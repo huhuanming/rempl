@@ -10,31 +10,8 @@
         "Sergey Melyukov <s.melukov@gmail.com>"
     ],
     "type": "module",
-    "main": "./lib/node.js",
     "types": "./lib/browser.d.ts",
     "browser": "./lib/browser.js",
-    "exports": {
-        ".": {
-            "types": "./lib/browser.d.ts",
-            "node": {
-                "types": "./lib/node.d.ts",
-                "require": "./lib/node.cjs",
-                "import": "./lib/node.js"
-            },
-            "default": {
-                "types": "./lib/browser.d.ts",
-                "require": "./lib/browser.cjs",
-                "import": "./lib/browser.js"
-            }
-        },
-        "./sandbox-init": {
-            "types": "./lib/sandbox/browser/sandbox-init.d.ts",
-            "require": "./lib/sandbox/browser/sandbox-init.cjs",
-            "import": "./lib/sandbox/browser/sandbox-init.js"
-        },
-        "./dist/*": "./dist/*.js",
-        "./package.json": "./package.json"
-    },
     "scripts": {
         "lint": "eslint scripts/*.cjs src test && npm run ts-check",
         "ts-check": "tsc --noEmit",
