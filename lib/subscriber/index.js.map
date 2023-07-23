@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../src/subscriber/index.ts"],"sourcesContent":["export function getSubscriber() {\n    throw new Error(\"[rempl] Subscriber doesn't supported on node.js\");\n}\n"],"names":[],"mappings":"AAAA,SAAA,aAAA,GAAA;AACA,IAAA,MAAA,IAAA,KAAA,CAAA,iDAAA,CAAA,CAAA;AACA;;;;"}

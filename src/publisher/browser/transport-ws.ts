@@ -104,7 +104,7 @@ export class BrowserWsTransport extends WsTransport {
         return {
             ...super.getInfo(),
             location: String(' '),
-            title: top?.document?.title || top?.location?.href || 'Unknown',
+            title: top?.REMPL_TITLE || top?.document?.title || top?.location?.href || 'Unknown',
         };
     }
 }

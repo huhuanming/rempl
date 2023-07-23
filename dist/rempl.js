@@ -2760,7 +2760,7 @@ window.rempl = function rempl() {
       console.warn("[rempl] Connection to WS server already set");
     }
   }
-  var import_socket_io_slim = __toESM(require_socket_io_slim(), 1);
+  var import_socket_io_slim = __toESM(require_socket_io_slim());
   var endpoints = /* @__PURE__ */ Object.create(null);
   var INFO_UPDATE_TIME = 100;
   var DEBUG2 = false;
@@ -3068,10 +3068,10 @@ window.rempl = function rempl() {
       }
     }
     getInfo() {
-      var _a2, _b, _c, _d;
+      var _a2, _b, _c, _d, _e;
       return __spreadProps(__spreadValues({}, super.getInfo()), {
         location: String(" "),
-        title: ((_b = (_a2 = resolvedTop) == null ? void 0 : _a2.document) == null ? void 0 : _b.title) || ((_d = (_c = resolvedTop) == null ? void 0 : _c.location) == null ? void 0 : _d.href) || "Unknown"
+        title: ((_a2 = resolvedTop) == null ? void 0 : _a2.REMPL_TITLE) || ((_c = (_b = resolvedTop) == null ? void 0 : _b.document) == null ? void 0 : _c.title) || ((_e = (_d = resolvedTop) == null ? void 0 : _d.location) == null ? void 0 : _e.href) || "Unknown"
       });
     }
   };
