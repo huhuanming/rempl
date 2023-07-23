@@ -5,7 +5,7 @@ var Value = require('basis.data').Value;
 var Expression = require('basis.data.value').Expression;
 var Node = require('basis.ui').Node;
 var transport = require('../transport.js');
-var createRemplSandbox = require('rempl:sandbox/browser/index.cjs');
+var createRemplSandbox = require('../lib/sandbox/browser/index.js').createSandbox;
 
 function createSandbox(endpoint, options) {
     function notify(type, args) {
